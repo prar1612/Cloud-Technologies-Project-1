@@ -1,0 +1,49 @@
+<!-- After logging in through AWS Cognito, user is redirected to this page-->
+<!DOCTYPE html>
+<html>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+     function getHtml(template) {
+          return template.join('\n');
+       }
+	    function logout() {
+	location.href="https://newdomain16122.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=2ttb3hgpgdj5rp8c509fc648ok&redirect_uri=https://dgc16yc7f0ot4.cloudfront.net/index.html";
+
+	   }
+    function myFunction() {
+	//get the access token of logged in user 
+        var urlParams = new URLSearchParams(window.location.search);
+			
+			var url = window.location.href;
+		    var res = url.split("=");
+		  var final = res[2].replace("&expires_in","");
+	
+	AWS.config.update({
+	  region: 'us-east-1'
+	});
+	var cognitoidentityserviceprovider = new AWS.CognitoIdentityServiceProvider();
+        var params = {
+			AccessToken: final /* required */
+		};
+	//get the logged in user's details
+	cognitoidentityserviceprovider.getUser(params, function(err, data) {
+	  if (err) console.log(err, err.stack); // an error occurred
+	  else    {
+		 var obj = JSON.stringify(data.UserAttributes[2]);
+		  var txt = JSON.stringify(data);
+		  document.getElementById("userName").innerHTML = data.UserAttributes[2].Value;
+	  }
+	});
+    }
+	//call the function in the JS to list Job Positions
+     listJobPositions();
+    </script>
+    
+    <body onload="myFunction()">
+<h1><img src="recruitment.png"  height="90" width="150">Hello <span id="userName"></span><br/>
+Welcome to Smart Recruiters!!</h1><br/>
+<input type="button" style="margin-left:49%;" value="LogOut" onclick="logout();">
+
+<div id="app"></div>
+</html>
