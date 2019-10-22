@@ -1,0 +1,28 @@
+<!-- Admin view of the app, where the admin can create new Job Positions, and view resumes and also file details-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <!--This is the Node JS file where all the back end logic is written-->
+	<script src="./app.js"></script>
+    <script>
+       function getHtml(template) {
+          return template.join('\n');
+       }
+	   function logout() {
+	location.href="index.html";
+
+	   }
+	   console.log('here');
+	 
+       listJobPositions();
+	   
+	   
+    </script>
+  </head>
+  <body>
+    <h1><img src="recruitment.png"  height="90" width="150">Welcome!</h1> 
+	<br/><input type="button" style="margin-left:49%;" value="LogOut" onclick="logout();">
+    <div id="app"></div>
+  </body>
+</html>

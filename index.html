@@ -1,0 +1,17 @@
+<!-- First Page in the application, giving options for admin and job applicant login -->
+<html>
+<script>
+function redirectToAdminLoginPage(){
+console.log('here');
+	location.href="firstpage.html";
+}
+function redirectToUserLogin(){
+	location.href="https://newdomain16122.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=2ttb3hgpgdj5rp8c509fc648ok&redirect_uri=https://dgc16yc7f0ot4.cloudfront.net/index.html";
+}
+</script>
+<h1><img src="recruitment.png"  height="90" width="150">Welcome to Smart Recruiters!!!!</h1>
+<br/>
+<span><img src="admin.png"  height="90" width="150" style="margin-left:15%;"/> <img src="user.png"  height="90" width="150" style="margin-left:5%;"/><br/><input type="button" value="Login as Admin" onclick="redirectToAdminLoginPage();" style="margin-left:17%;"/>
+<input type="button" value="Click here to apply for a Job!" onclick="redirectToUserLogin();" style="margin-left:5%;"/>
+
+</html>

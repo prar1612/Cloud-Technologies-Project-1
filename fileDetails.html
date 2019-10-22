@@ -1,0 +1,29 @@
+<!-- Page to display the details of the selected file-->
+<html>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="./app.js"></script>
+<script>
+ function getHtml(template) {
+          return template.join('\n');
+       }
+	    function logout() {
+	location.href="index.html";
+
+	   }
+window.onload = function() {
+ 
+			var urlParams = new URLSearchParams(window.location.search);
+			var myParam = urlParams.get('param1');
+			 
+	   
+	   fileMetadataFetch(myParam);
+	   }
+</script>
+<h1><img src="recruitment.png"  height="90" width="150">Welcome!</h1><br/>
+<input type="button" style="margin-left:49%;" value="LogOut" onclick="logout();">
+
+	<div id="heading">Below are the details of the requested resume:</div><br/>
+    <div id="app1"><br/></div>
+	<div id="app">  </div>
+	
+</html>
