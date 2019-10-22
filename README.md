@@ -2,6 +2,15 @@
 This Project is titled -  'Smart Recruiters'. This is an app that can be used by companies, to allow people to apply for jobs by uploading their resumes.
 It can also be used by Admins to view all uploaded resumes and also create new Job Positions.
 
+##Files Uploaded Details:
+index.html -  The first landing page
+firstpage.html - Admin Login
+admin.html - Admin home page with list of folders
+app.js - Node JS code to perform operations on S3 bucket
+fileDetails.html - Page displaying selected file details
+Applicant Folder - Files related to applicant login: index.html - Applicant home page app.js - Node JS code to add/remove resumes 
+Lamda Folder -  Lambda function triggered from API Gateway to validate Admin credentials
+
 ## How to access the app
 You can access the app at 'http://prarthana-aws.com' There are two options available:
 1.Log in as Admin
