@@ -4,12 +4,12 @@ It can also be used by Admins to view all uploaded resumes and also create new J
 
 ## Files Uploaded Details:
 index.html -  The first landing page<br/>
-firstpage.html - Admin Login
-admin.html - Admin home page with list of folders
-app.js - Node JS code to perform operations on S3 bucket
-fileDetails.html - Page displaying selected file details
-Applicant Folder - Files related to applicant login: index.html - Applicant home page app.js - Node JS code to add/remove resumes 
-Lamda Folder -  Lambda function triggered from API Gateway to validate Admin credentials
+firstpage.html - Admin Login<br/>
+admin.html - Admin home page with list of folders<br/>
+app.js - Node JS code to perform operations on S3 bucket<br/>
+fileDetails.html - Page displaying selected file details<br/>
+Applicant Folder - Files related to applicant login: index.html - Applicant home page app.js - Node JS code to add/remove resumes <br/>
+Lamda Folder -  Lambda function triggered from API Gateway to validate Admin credentials<br/>
 
 ## How to access the app
 You can access the app at 'http://prarthana-aws.com' There are two options available:
@@ -23,12 +23,13 @@ Logging in as a admin, you are redirected to a login page. Admin would be given 
 As a job applicant, you would have to sign up for an account, and then login with the newly created credentials.Once logged in, the applicant can click on the interested Job Position and upload their resume.
 
 ## AWS Resources used
-1.S3 Bucket to store the Job Positions as folders and Resumes as objects within that
-2.Cognito - for Job applicant sign up and login
-3. DynamoDB - Holds admin credentials
-4.API - To create get request to get the admin credentials from DynamoDB
-5.Lambda - Triggered by api to get the admin credentials
-6. CloudFront - To create a distribution for the webpage hosted on s3
-7. R53- Used to create a new domain
-8. SNS - Used to send mail to admin whenever new resume is uploaded
+1.S3 Bucket to store the Job Positions as folders and Resumes as objects within that<br/>
+2.Cognito - for Job applicant sign up and login<br/>
+3.DynamoDB - Holds admin credentials<br/>
+4.API - To create get request to get the admin credentials from DynamoDB<br/>
+5.Lambda - Triggered by api to get the admin credentials<br/>
+6.CloudFront - To create a distribution for the webpage hosted on s3<br/>
+7.R53- Used to create a new domain<br/>
+8.SNS - Used to send mail to admin whenever new resume is uploaded<br/>
+9.CloudWatch - To monitor logs when files are loaded onto S3
 
