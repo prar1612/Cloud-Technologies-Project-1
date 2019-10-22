@@ -2,7 +2,7 @@
 This Project is titled -  'Smart Recruiters'. This is an app that can be used by companies, to allow people to apply for jobs by uploading their resumes.
 It can also be used by Admins to view all uploaded resumes and also create new Job Positions.
 
-##Files Uploaded Details:
+## Files Uploaded Details:
 index.html -  The first landing page
 firstpage.html - Admin Login
 admin.html - Admin home page with list of folders
