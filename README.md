@@ -3,7 +3,7 @@ This Project is titled -  'Smart Recruiters'. This is an app that can be used by
 It can also be used by Admins to view all uploaded resumes and also create new Job Positions.
 
 ## Files Uploaded Details:
-index.html -  The first landing page
+index.html -  The first landing page<br/>
 firstpage.html - Admin Login
 admin.html - Admin home page with list of folders
 app.js - Node JS code to perform operations on S3 bucket
